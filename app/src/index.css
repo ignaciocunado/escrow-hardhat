@@ -1,10 +1,10 @@
 body {
   background-color: #eee;
-  display: flex;
+  margin: 0;
   font-family: 'Muli', sans-serif;
 }
 
-.contract, .existing-contracts {
+.contract, .existing-contracts, .custom {
   margin: 20px;
   display: inline-block;
   padding: 40px;
@@ -16,6 +16,7 @@ h1 {
   margin: 10px;
   padding: 10px;
   border-bottom: 1px solid #eee;
+  text-align: center;
 }
 
 label {
@@ -64,7 +65,26 @@ input[type="text"] {
   font-weight: bold;
 }
 
-.existing-contract .complete {
+.existing-contract .complete, .existing-contract {
   color: #5aa75a;
   text-align: center;
+}
+
+#whole {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  margin: auto;
+  min-height: 100%;
+  justify-content: space-around;
+}
+
+#page {
+  width: 100%;
+}
+
+#definition {
+  max-width: 70%;
+  margin: auto;
+  font-size: large;
 }

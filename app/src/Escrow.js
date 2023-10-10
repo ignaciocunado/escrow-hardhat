@@ -18,7 +18,7 @@ export default function Escrow({
         </li>
         <li>
           <div> Value </div>
-          <div> {value} </div>
+          <div> {parseFloat(value) * 10e-18} </div>
         </li>
         <div
           className="button"

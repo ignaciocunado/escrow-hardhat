@@ -154,8 +154,6 @@ function App() {
       escrowContract.beneficiary(),
       provider.getBalance(address),
     ]);
-    console.log(arbiter)
-    console.log(beneficiary)
     const newEscrow = {
       address: address,
       arbiter,
@@ -172,6 +170,11 @@ function App() {
         await approve(escrowContract, signer);
       },
     };
+    for(let i = 0; i < escrows.length; i++) {
+      if(escrows[i].address === newEscrow.address) {
+        return;
+      }
+    }
     setEscrows([...escrows, newEscrow]);
     }
     
